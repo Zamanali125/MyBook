@@ -1,0 +1,34 @@
+<html>
+<head>
+<title> HTML Form </title>
+<script>
+        function submit_form() 
+		{
+		var pass = document.getElementById('password').value;
+		var pass_confirm=document.getElementById('confirm_password').value;
+		if (pass == pass_confirm){
+		           document.register_form.submit();
+		}
+		else {
+			alert("password do not match");
+			 }
+		}
+</script>
+</head>
+<form name = "register_form" method="POST" action="user.php">
+<body style=" background-color:Skyblue;">
+<pre>
+
+<center><h1>  User Registration </h1>
+<center>       First Name:   <input type="text" name="first_name"placeholder="First Name"><br>
+        Last Name:   <input type="text" name="last_name" placeholder="Last Name"><br>
+        User Name:   <input type="text" name="user_name"placeholder="User Name"><br>
+         Password:   <input id = "password" type="Password" name="password" placeholder="password"><br>
+  Confirm Password:  <input id = "confirm_password" type="Password" name="confirm_password" placeholder="Confirm password"><br>
+                                 <input type="button" name = "register" Value="register" onclick=submit_form() />  <input type="Reset" Value="Reset">                
+            
+  </center>
+  </pre>
+  </form>
+</body>
+</html>
